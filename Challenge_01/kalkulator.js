@@ -8,6 +8,7 @@ readline.question(
       2.Hitung Luas Persegi
       3.Hitung Volume Kubus
       4.Hitung Volume Tabung
+      5.Akar Kuadrat
       Masukkan Angka Pilihan ! = `, 
       Menu => {
               
@@ -38,14 +39,14 @@ readline.question(
                                 result = number1 * number2
                             }else if(Hitung == 4){
                                 result = number1 / number2
-                            }else if(Hitung == 5){
-                                result = number1 ** number2
                             }else if(Hitung){
                                 result = "Maaf Pilihan Tidak Ada"      
                             }
                         console.log("---------------------------------------------------------------")
                         console.log( ` Hasil = ${result}`)
                         console.log("---------------------------------------------------------------")
+                        readline.close();4
+                    
                 })
             })
         })
@@ -58,7 +59,10 @@ readline.question(
             console.log("---------------------------------------------------------------")
                 console.log(`Jadi Luas Persegi Dengan Sisi ${s} adalah = ${result} cm^2`)
             console.log("---------------------------------------------------------------")
+            readline.close();
          })
+         
+     
      }else if (Menu == 3)
      {
         readline.question('Masukkan Panjang Sisi Kubus = ', sisi => {
@@ -68,6 +72,7 @@ readline.question(
             console.log("---------------------------------------------------------------")
             console.log(`Jadi Volume Kubus Dengan Sisi ${s} adalah ${result} cm^3`)
             console.log("---------------------------------------------------------------")
+            readline.close();
         })
      }else if (Menu == 4)
      {
@@ -80,8 +85,22 @@ readline.question(
                 console.log("---------------------------------------------------------------");
                 console.log(`Jadi Volume Kubus dengan Tinggi ${t} dan Jari-Jari ${j} adalah ${result} cm^3`)
                 console.log("---------------------------------------------------------------");
+                readline.close();
             })
         })
+     }else if (Menu == 5)
+     {
+        
+            readline.question('Masukkan Angka Akar Kuadrat = ', kuadrat => {
+                let k = Number(kuadrat)
+                let result
+                result = Math.sqrt(k)
+                console.log("---------------------------------------------------------------");
+                console.log(`Jadi Akar Kuadrat Dari ${kuadrat} Adalah ${result}`)
+                console.log("---------------------------------------------------------------");
+                readline.close();
+            })
+        
      }else
 readline.close
   })
